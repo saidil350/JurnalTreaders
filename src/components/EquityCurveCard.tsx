@@ -1,7 +1,6 @@
-
 'use client';
 import React from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, AreaChart, Area } from 'recharts';
+import { XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
 
 const data = [
   { name: '03 May', value: 5000 },
@@ -15,7 +14,7 @@ const data = [
 
 const EquityCurveCard = () => {
   return (
-    <div className="bg-[#222429] p-6 rounded-lg">
+    <div className="p-6 rounded-lg" style={{ background: 'var(--secondary)', color: 'var(--foreground)' }}>
       <div className="flex justify-between items-center mb-4">
         <h3 className="font-bold">Equity Curve</h3>
         <button className="text-gray-400 hover:text-white">i</button>

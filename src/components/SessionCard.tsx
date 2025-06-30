@@ -1,9 +1,8 @@
-
 import React from 'react';
 
 const SessionCard = () => {
   return (
-    <div className="bg-[#222429] p-6 rounded-lg">
+    <div className="p-6 rounded-lg" style={{ background: 'var(--secondary)', color: 'var(--foreground)' }}>
       <div className="flex justify-between items-start">
         <div>
           <h2 className="text-2xl font-bold">SMC 5 menit</h2>

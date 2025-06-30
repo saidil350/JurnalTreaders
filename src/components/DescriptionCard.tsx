@@ -1,9 +1,8 @@
-
 import React from 'react';
 
 const DescriptionCard = () => {
   return (
-    <div className="bg-[#222429] p-6 rounded-lg h-full">
+    <div className="p-6 rounded-lg h-full" style={{ background: 'var(--secondary)', color: 'var(--foreground)' }}>
       <div className="flex justify-between items-center mb-4">
         <h3 className="font-bold">Description</h3>
         <button className="text-gray-400 hover:text-white">

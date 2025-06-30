@@ -1,7 +1,6 @@
-
 'use client';
 import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell } from 'recharts';
 
 const data = [
   { name: 'Mon', pnl: 100 },
@@ -13,7 +12,7 @@ const data = [
 
 const DailyPerformanceCard = () => {
   return (
-    <div className="bg-[#222429] p-6 rounded-lg">
+    <div className="p-6 rounded-lg" style={{ background: 'var(--secondary)', color: 'var(--foreground)' }}>
       <div className="flex justify-between items-center mb-4">
         <h3 className="font-bold">Daily Performance</h3>
         <button className="text-gray-400 hover:text-white">i</button>
@@ -26,7 +25,11 @@ const DailyPerformanceCard = () => {
             <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
             <Tooltip />
             <Legend />
-            <Bar dataKey="pnl" fill="#3B82F6" />
+            <Bar dataKey="pnl">
+              {data.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={entry.pnl < 0 ? '#EF4444' : '#3B82F6'} />
+              ))}
+            </Bar>
           </BarChart>
         </ResponsiveContainer>
       </div>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface StatCardProps {
@@ -8,7 +7,7 @@ interface StatCardProps {
 
 const StatCard: React.FC<StatCardProps> = ({ title, value }) => {
   return (
-    <div className="bg-[#222429] p-4 rounded-lg">
+    <div className="p-4 rounded-lg" style={{ background: 'var(--secondary)', color: 'var(--foreground)' }}>
       <div className="flex justify-between items-center mb-2">
         <h4 className="text-sm text-gray-400">{title}</h4>
         <button className="text-gray-400 hover:text-white">i</button>

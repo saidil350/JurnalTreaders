@@ -1,4 +1,3 @@
-
 'use client';
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
@@ -9,7 +8,7 @@ const data = [
 
 const MonthlyPerformanceCard = () => {
   return (
-    <div className="bg-[#222429] p-6 rounded-lg">
+    <div className="p-6 rounded-lg" style={{ background: 'var(--secondary)', color: 'var(--foreground)' }}>
       <div className="flex justify-between items-center mb-4">
         <h3 className="font-bold">Monthly Performance</h3>
         <button className="text-gray-400 hover:text-white">i</button>
